@@ -206,7 +206,7 @@ def _metadata_from_locked_file(filepath, passphrase):
                     master_key.hash
                 )
             )
-        except CryptoError:
+        except (CryptoError, ValueError):
             return
 
     return metadata
@@ -393,9 +393,5 @@ def unlock(filepath, passphrase, delete_src=False, save_dir=None, save_as=None):
             raise Exception("HMACs don't match")
 
 
-def main():
-    print("This doesn't do anything yet")
-
-
 if __name__ == '__main__':
-    main()
+    _metadata_from_locked_file('/home/doctart/test.txt', 'aaa')
