@@ -391,7 +391,3 @@ def unlock(filepath, passphrase, delete_src=False, save_dir=None, save_as=None):
         # FIXME: We should probably do more than raise an exception
         if not hmac.compare_digest(locked_file_hmac, current_hmac.digest()):
             raise Exception("HMACs don't match")
-
-
-if __name__ == '__main__':
-    _metadata_from_locked_file('/home/doctart/test.txt', 'aaa')

@@ -2,7 +2,7 @@ from setuptools import setup
 
 setup(
     name='slashlock',
-    version='0.1.4',
+    version='0.1.5',
     description='Slashlock - A Simple File and Folder Encryptor',
     url='https://github.com/wookalar/slashlock/blob/master/slashlock.py',
     author='Wookalar Software',
